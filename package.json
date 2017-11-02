@@ -1,0 +1,33 @@
+{
+  "name": "reactron-components",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.ts",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "@types/react": "^16.0.19",
+    "@types/react-dom": "^16.0.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.3.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015-node": "^6.1.1",
+    "babel-preset-react": "^6.24.1",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.6.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack-dev-server --content-base examples --config examples/webpack.config.js --inline --hot"
+  },
+  "author": "",
+  "license": "MIT"
+}
