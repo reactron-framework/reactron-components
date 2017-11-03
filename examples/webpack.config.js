@@ -1,4 +1,9 @@
 const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const extractSass = new ExtractTextPlugin({
+  filename: "bundle.css",
+});
 
 module.exports = {
   devtool: 'cheap-module-source-map',
@@ -20,6 +25,23 @@ module.exports = {
         exclude: /node_modules/,
         loaders: ['babel-loader'],
       },
+      // All scss files transpiling
+      {
+        test: /\.scss$/,
+        use: extractSass.extract({
+            use: [{
+                loader: "css-loader"
+            }, {
+                loader: "sass-loader"
+            }],
+            // use style-loader in development
+            fallback: "style-loader"
+        })
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader?name=fonts/[name].[ext]'
+    }
     ],
   },
   resolve: {
@@ -28,4 +50,7 @@ module.exports = {
     },
     extensions: [".ts", ".tsx", ".js", ".json"]
   },
+  plugins: [
+    extractSass
+  ],
 };

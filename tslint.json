@@ -1,0 +1,13 @@
+{
+    "extends": [
+      "tslint:recommended",
+      "tslint-eslint-rules",
+      "tslint-react",
+      "tslint-config-airbnb"
+    ],
+    "rules": {
+      "ter-indent": [true, 2],
+      "no-angle-bracket-type-assertion": false,
+      "allow-synthetic-default-imports": true
+    }
+  }
