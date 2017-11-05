@@ -1,0 +1,6 @@
+{
+    "editor.autoIndent": true,
+    "javascript.format.insertSpaceAfterCommaDelimiter": true,
+    "editor.tabSize": 2,
+    "files.eol": "\n"
+}
