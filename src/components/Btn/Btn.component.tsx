@@ -23,14 +23,28 @@ class Btn extends React.Component<IBtn, {}> {
   public render() {
     const { size = 'default' , theme = '', className, children, ...props } = this.props;
     const classNames = classnames(
-      'button',
+      'btn button',
       className,
       size + '-button',
+      'btn-' + size,
+      'btn-' + this.getOsxClass(theme),
       theme,
     );
     return (
       <button className={classNames} {...props}>{children}</button>
     );
+  }
+
+  getOsxClass(theme: string){
+    if(theme === '')
+      return 'defualt';
+    else if(theme === 'success'){
+      return 'positive';
+    }
+    else if(theme === 'danger')
+      return 'negative';
+    else
+      return theme;
   }
 }
 

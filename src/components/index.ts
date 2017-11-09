@@ -1,3 +1,4 @@
+import AppbarComponent from './Appbar/Appbar.component';
 import BtnComponent from './Btn/Btn.component';
 import CheckboxComponent from './Checkbox/Checkbox.component';
 import InputComponent from './Input/Input.component';
@@ -14,4 +15,5 @@ export {
   TextboxComponent,
   SelectComponent,
   BtnComponent,
+  AppbarComponent,
 };
