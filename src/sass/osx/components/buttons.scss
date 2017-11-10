@@ -128,3 +128,14 @@
   margin-left: 5px;
   content: '\e873'
 }
+
+// Button info for osx
+.btn-info {
+  border-color: darken($info-color, 10%);
+  border-bottom-color: darken($info-color, 15%);
+  @include linear-gradient(lighten($info-color, 10%), darken($info-color, 10%));
+
+  &:active {
+    @include linear-gradient($info-color, darken($info-color, 15%));
+  }
+}

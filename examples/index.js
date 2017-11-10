@@ -10,7 +10,7 @@ loadAsset('osx');
 class Example extends React.Component{
     render(){
         return (
-            <div style={{"width": "50%"}}>
+            <div style={{ "width": "80%", marginLeft: 'auto', marginRight: 'auto', marginTop: '20px'}}>
                 <AppbarComponent>AppbarComponent</AppbarComponent>
                 <br />
                 <CheckboxComponent value="Mi name na Tom" onClick={(e) => alert(e.target.value)} indeterminate={true}>Indeterminate CheckboxComponent</CheckboxComponent>
@@ -28,7 +28,7 @@ class Example extends React.Component{
                     <option>2</option>
                     <option>3</option>
                 </SelectComponent>
-                <BtnComponent theme="" type="button"> Button Here</BtnComponent>
+                <BtnComponent theme="info" type="button"> Button Here</BtnComponent>
             </div>);
     }
 }
